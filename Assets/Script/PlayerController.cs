@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();// Character controller (자유롭게 조절) 
     }
 
     void Update()
