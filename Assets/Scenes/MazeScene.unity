@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 206968071}
   - component: {fileID: 206968070}
   - component: {fileID: 206968069}
+  - component: {fileID: 206968072}
   m_Layer: 0
   m_Name: Card_Take
   m_TagString: Untagged
@@ -169,7 +170,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -232,6 +233,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206968067}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &206968072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206968067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f17736149b3dac4e9387d8d97a18aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordCard
 --- !u!1 &224450075
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +257,7 @@ GameObject:
   - component: {fileID: 224450079}
   - component: {fileID: 224450078}
   - component: {fileID: 224450077}
+  - component: {fileID: 224450080}
   m_Layer: 0
   m_Name: Card_Taker
   m_TagString: Untagged
@@ -282,7 +296,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -345,6 +359,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224450075}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &224450080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224450075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f17736149b3dac4e9387d8d97a18aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordCard
 --- !u!1 &327486528
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +383,7 @@ GameObject:
   - component: {fileID: 327486532}
   - component: {fileID: 327486531}
   - component: {fileID: 327486530}
+  - component: {fileID: 327486533}
   m_Layer: 0
   m_Name: Card_Taken
   m_TagString: Untagged
@@ -395,7 +422,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -458,6 +485,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327486528}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &327486533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327486528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f17736149b3dac4e9387d8d97a18aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordCard
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1766,7 @@ GameObject:
   - component: {fileID: 621008325}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2619,6 +2658,7 @@ GameObject:
   - component: {fileID: 918301951}
   - component: {fileID: 918301950}
   - component: {fileID: 918301949}
+  - component: {fileID: 918301952}
   m_Layer: 0
   m_Name: Card_Took
   m_TagString: Untagged
@@ -2657,7 +2697,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2720,6 +2760,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918301947}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &918301952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918301947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f17736149b3dac4e9387d8d97a18aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordCard
 --- !u!1 &971230133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,6 +3876,7 @@ GameObject:
   - component: {fileID: 1452708953}
   - component: {fileID: 1452708952}
   - component: {fileID: 1452708951}
+  - component: {fileID: 1452708954}
   m_Layer: 0
   m_Name: Card_Taking
   m_TagString: Untagged
@@ -3862,7 +3915,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3925,6 +3978,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452708949}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1452708954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452708949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f17736149b3dac4e9387d8d97a18aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordCard
 --- !u!1 &1456942439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,6 +4376,7 @@ GameObject:
   - component: {fileID: 1839923028}
   - component: {fileID: 1839923027}
   - component: {fileID: 1839923026}
+  - component: {fileID: 1839923029}
   m_Layer: 0
   m_Name: Card_Taked
   m_TagString: Untagged
@@ -4349,7 +4415,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4412,6 +4478,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839923024}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1839923029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839923024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f17736149b3dac4e9387d8d97a18aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordCard
 --- !u!1 &1907689009
 GameObject:
   m_ObjectHideFlags: 0
