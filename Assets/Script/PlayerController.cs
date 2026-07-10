@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-
+    [SerializeField] private float moveSpeed = 5f;
+  
     private Rigidbody rb;
-    private Vector3 moveDir;
+    private Vector3 moveDirection;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();// Character controller (자유롭게 조절) 
     }
@@ -26,12 +26,14 @@ public class PlayerMovement : MonoBehaviour
             if (Keyboard.current.sKey.isPressed) v = -1;
         }
 
-        moveDir = new Vector3(h, 0, v).normalized;
+        moveDirection = new Vector3(h, 0f, v).normalized;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        Vector3 targetPosition = rb.position + moveDir * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(targetPosition);
+        Vector3 nextPosition =
+            rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
+        
+        rb.MovePosition(nextPosition);
     }
 }
