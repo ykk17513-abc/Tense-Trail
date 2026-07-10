@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using JetBrains.Annotations;
 
 public class MazeManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class MazeManager : MonoBehaviour
         if (selectedWord == correctOrder[currentIndex])
         {
             Debug.Log("Correct!");
-            if(feedbackText != null)
+            if (feedbackText != null)
             {
                 feedbackText.text = "Correct!";
             }
@@ -34,7 +35,11 @@ public class MazeManager : MonoBehaviour
         {
             feedbackText.text = "Try again!";
         }
-        
+
         return false;
+    }
+    public bool IsCompleted()
+    {
+        return currentIndex >= correctOrder.Length;
     }
 }
