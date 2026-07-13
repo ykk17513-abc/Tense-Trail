@@ -7,7 +7,16 @@ public class WordCard : MonoBehaviour
 
     [SerializeField] private MazeManager mazeManager; // GameManager의 MazeManager 연결
 
+    [SerializeField] private Material wrongMaterial; // 오답일 때 사용할 빨간색 Material
+
+
     private bool playerNearby = false; //플레이어가 카드 근처에 있는지?
+    private Renderer cardRenderer;
+
+    private void Awake()
+    {
+        cardRenderer = GetComponent<Renderer>();
+    }
 
     private void OnTriggerEnter(Collider other) // 플레이어가 카드 영역 안으로 들어오면 실행
     {
@@ -32,8 +41,13 @@ public class WordCard : MonoBehaviour
         if (playerNearby && Keyboard.current.enterKey.wasPressedThisFrame)
         // 플레이어가 카드 근처에 있고 Enter 키를 눌렀을 때, MazeManager 호출하기
         {
-            mazeManager.CheckAnswer(word);
+            bool isCorrect = mazeManager.CheckAnswer(word);
             
+            if (!isCorrect)
+            {
+                cardRenderer.material = wrongMaterial;
+            }
+
         }
 
     }
