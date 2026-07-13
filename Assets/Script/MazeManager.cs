@@ -38,6 +38,8 @@ public class MazeManager : MonoBehaviour
 
         return false;
     }
+
+    // Take, Took, Taken 순서대로 맞췄는지 확인
     public bool IsCompleted()
     {
         return currentIndex >= correctOrder.Length;
