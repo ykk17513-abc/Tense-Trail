@@ -68,6 +68,18 @@ Canvas
 - Rigidbody 기반 이동 처리를 추가하였다. 
 
 ## 8. 엔진 기능 활용 
-- Collider를 이용한 벽 충돌 처리
-- 결과 UI "You Escaped!"
+1) 물리 Trigger
+Trigger Collider를 사용하여 플레이어가 Word Card 및 Exit 영역에 진입했는지 감지하였다. 
+: Word Card 접근 감지
+: Exit 도착 감지
+: Enter 입력을 통한 카드 선택: 맞으면 "Correct!", 틀리면 "Try again!", 탈출 성공하면 "You escaped!"(*console창 참고)
+
+2) 머티리얼 변경 
+- Material을 변경하여 게임 상태를 시각적으로 표현하였다.
+: 기본 Word Card : 연두색
+: 오답 카드 선택 시 : 빨간색
+
+3) 결과 UI
+: TextMeshPro UI를 사용하여 게임 완료 결과를 화면에 출력하였다.
+: 게임 완료 시 : "You Escaped!"
 
