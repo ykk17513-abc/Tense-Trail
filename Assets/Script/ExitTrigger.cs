@@ -25,7 +25,6 @@ public class Exit : MonoBehaviour
                     feedbackText.text = "You escaped!";
                 }
             }
-            
             else
             {
                 Debug.Log("Find all correct words first!");
