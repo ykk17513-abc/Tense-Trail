@@ -20,7 +20,7 @@ public class WordCard : MonoBehaviour // CLASS PROPERTY, INHERITANCE
         if (other.CompareTag("Player")) // 들어온 물체가 플레이어인지 확인
         {
             playerNearby = true;
-            Debug.Log("카드 근처!");
+            Debug.Log("카드 근처!"); 
         }
     }
     private void OnTriggerExit(Collider other) //플레이어가 카드 영역 밖으로 나갔을 때 실행
