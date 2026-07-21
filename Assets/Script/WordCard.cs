@@ -5,7 +5,8 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
 {
     [SerializeField] private string word;  // 문자열 변수 생성 
     [SerializeField] private MazeManager mazeManager; // (type + instance) ; GameManager의 MazeManager 연결
-    [SerializeField] private Material wrongMaterial; 
+    [SerializeField] private Material wrongMaterial;
+    [SerializeField] private Material correctMaterial;
 
     private bool playerNearby = false; // 변수 초기화(initialization);
                                        // playerNearby라는 이름의 bool 변수를 만들고, 시작할때값은 false로
@@ -44,6 +45,10 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
             {
                 cardRenderer.material = wrongMaterial;
                 // 정답이 아니라면, 카드의 색깔을 wrongMaterial로 변경 
+            }
+            else
+            {
+                cardRenderer.material = correctMaterial;
             }
         }
     }
