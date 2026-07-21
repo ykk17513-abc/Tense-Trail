@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
@@ -25,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         }
         moveDirection = new Vector3(h, 0f, v).normalized;
     }
-
     private void FixedUpdate()
     {
         Vector3 nextPosition =

@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-
 public class Exit : MonoBehaviour
 {
     // Take → Took → Taken 완료 여부를 확인
@@ -28,7 +27,6 @@ public class Exit : MonoBehaviour
             else
             {
                 Debug.Log("Find all correct words first!");
-
                 if (feedbackText != null)
                 {
                     feedbackText.text = "Find all correct words first!";
