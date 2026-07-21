@@ -1,4 +1,4 @@
-using UnityEngine; // namespace unity engine 안에 있는 모든 클래스,함수,변수들을 사용할 수 있게해주는 코드.
+using UnityEngine; // namespace unity engine 안에 있는 모든 클래스,함수,변수들을 사용할 수 있게 해주는 코드.
 using UnityEngine.InputSystem;// 이게 없으면 unityengine.inputsystem.keyboard 라고 써야함. 
 using System.Collections; // 코루틴 쓰려면 필요 (IEnumerator가 이 네임스페이스안에 있음) 
 
@@ -18,7 +18,7 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
     private void Awake() // 게임이 실행될 때, 가장 먼저 딱 한번만 실행되는 함수 (unity 함수, C# 문법 x)
     {
         cardRenderer = GetComponent<Renderer>();
-        // 제네릭(generic); 오브젝트에 붙어있는 컴포넌트 중에, 
+        // 제네릭(generic); 오브젝트에 붙어있는 컴포넌트 중에
         // Renderer 타입인 걸 찾아서 가져와라. (카드의 색깔 변경을 위함) 
     }
     private void OnTriggerEnter(Collider other) // 이벤트 함수; 영역 체크용 ; 내 영역
@@ -47,7 +47,7 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
             {
                 cardRenderer.material = wrongMaterial;
                 // 정답이 아니라면, 카드의 색깔을 wrongMaterial로 변경 
-                StartCoroutine(ResetColorAfterDelay()); // 코루틴 실행; 2초 후 원래 색으로 되돌리기
+                StartCoroutine(ResetColorAfterDelay()); // 코루틴 실행
             }
             else
             {
@@ -55,10 +55,9 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
             }
         }
     }
-
-    private IEnumerator ResetColorAfterDelay()
+    private IEnumerator ResetColorAfterDelay() // 반환 타입이 IEnumerator인 함수; 코루틴을 사용하기 위해 필요 
     {
-        yield return new WaitForSeconds(2f);
-        cardRenderer.material = defaultMaterial;
+        yield return new WaitForSeconds(2f);// 2초간 "멈춤" (다른 코드는 계속 실행됨) 
+        cardRenderer.material = defaultMaterial; // 2초 후 원래 색(연두)으로 되돌리기
     }
 }
