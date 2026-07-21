@@ -1,5 +1,6 @@
 using UnityEngine; // namespace unity engine 안에 있는 모든 클래스,함수,변수들을 사용할 수 있게해주는 코드.
 using UnityEngine.InputSystem;// 이게 없으면 unityengine.inputsystem.keyboard 라고 써야함. 
+using System.Collections; // 코루틴 쓰려면 필요 (IEnumerator가 이 네임스페이스안에 있음) 
 
 public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, (start), onenable, disable, update, (lateupdate), etc)
 {
@@ -7,6 +8,7 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
     [SerializeField] private MazeManager mazeManager; // (type + instance) ; GameManager의 MazeManager 연결
     [SerializeField] private Material wrongMaterial;
     [SerializeField] private Material correctMaterial;
+    [SerializeField] private Material defaultMaterial; // 원래 색으로 되돌릴 때 필요 
 
     private bool playerNearby = false; // 변수 초기화(initialization);
                                        // playerNearby라는 이름의 bool 변수를 만들고, 시작할때값은 false로
@@ -45,11 +47,18 @@ public class WordCard : MonoBehaviour // 상속(INHERITANCE), lifecycle (awake, 
             {
                 cardRenderer.material = wrongMaterial;
                 // 정답이 아니라면, 카드의 색깔을 wrongMaterial로 변경 
+                StartCoroutine(ResetColorAfterDelay()); // 코루틴 실행; 2초 후 원래 색으로 되돌리기
             }
             else
             {
                 cardRenderer.material = correctMaterial;
             }
         }
+    }
+
+    private IEnumerator ResetColorAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        cardRenderer.material = defaultMaterial;
     }
 }

@@ -432,6 +432,7 @@ MonoBehaviour:
   mazeManager: {fileID: 297209695}
   wrongMaterial: {fileID: 2100000, guid: 246326dc9c69c8a46bc0ae33d5ad4a32, type: 2}
   correctMaterial: {fileID: 2100000, guid: 41eac09020824c244b0d9fc341a1e272, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 383812c9542e5c845a600a3fa161369b, type: 2}
 --- !u!1 &224450075
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +563,7 @@ MonoBehaviour:
   mazeManager: {fileID: 297209695}
   wrongMaterial: {fileID: 2100000, guid: 246326dc9c69c8a46bc0ae33d5ad4a32, type: 2}
   correctMaterial: {fileID: 2100000, guid: 41eac09020824c244b0d9fc341a1e272, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 383812c9542e5c845a600a3fa161369b, type: 2}
 --- !u!1 &297209694
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +771,7 @@ MonoBehaviour:
   mazeManager: {fileID: 297209695}
   wrongMaterial: {fileID: 2100000, guid: 246326dc9c69c8a46bc0ae33d5ad4a32, type: 2}
   correctMaterial: {fileID: 2100000, guid: 41eac09020824c244b0d9fc341a1e272, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 383812c9542e5c845a600a3fa161369b, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,6 +2971,7 @@ MonoBehaviour:
   mazeManager: {fileID: 297209695}
   wrongMaterial: {fileID: 2100000, guid: 246326dc9c69c8a46bc0ae33d5ad4a32, type: 2}
   correctMaterial: {fileID: 2100000, guid: 41eac09020824c244b0d9fc341a1e272, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 383812c9542e5c845a600a3fa161369b, type: 2}
 --- !u!1 &952868284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,6 +4410,7 @@ MonoBehaviour:
   mazeManager: {fileID: 297209695}
   wrongMaterial: {fileID: 2100000, guid: 246326dc9c69c8a46bc0ae33d5ad4a32, type: 2}
   correctMaterial: {fileID: 2100000, guid: 41eac09020824c244b0d9fc341a1e272, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 383812c9542e5c845a600a3fa161369b, type: 2}
 --- !u!1 &1456942439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,6 +4901,7 @@ MonoBehaviour:
   mazeManager: {fileID: 297209695}
   wrongMaterial: {fileID: 2100000, guid: 246326dc9c69c8a46bc0ae33d5ad4a32, type: 2}
   correctMaterial: {fileID: 2100000, guid: 41eac09020824c244b0d9fc341a1e272, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 383812c9542e5c845a600a3fa161369b, type: 2}
 --- !u!1 &1899098548
 GameObject:
   m_ObjectHideFlags: 0
