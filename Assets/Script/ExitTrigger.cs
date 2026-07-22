@@ -8,6 +8,7 @@ public class Exit : MonoBehaviour
 
     // GameView 문구 표시용
     [SerializeField] private TMP_Text feedbackText;
+    [SerializeField] private GameObject feedbackPanel;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +23,7 @@ public class Exit : MonoBehaviour
 
                 if (feedbackText != null)
                 {
+                    feedbackPanel.SetActive(true);
                     feedbackText.text = "You escaped!" + Environment.NewLine + 
                                         "Time: " + mazeManager.GetElapsedTime() + "s" + Environment.NewLine + 
                                         "Mistakes: " + mazeManager.GetWrongCount();
