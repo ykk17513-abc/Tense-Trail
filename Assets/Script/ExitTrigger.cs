@@ -1,4 +1,5 @@
 using UnityEngine;
+using System; // environment.newline 사용하기 위해 필요 
 using TMPro;
 public class Exit : MonoBehaviour
 {
@@ -16,13 +17,16 @@ public class Exit : MonoBehaviour
             // take, took, taken을 모두 맞혔는지 확인 
             if (mazeManager.IsCompleted())
             {
-                Debug.Log("You escaped!");
-                feedbackText.text = "You escaped!";
+                float elapsedTime = mazeManager.GetElapsedTime();
+                int wrongCount = mazeManager.GetWrongCount();
 
-                if(feedbackText != null)
+                if (feedbackText != null)
                 {
-                    feedbackText.text = "You escaped!";
+                    feedbackText.text = "You escaped!" + Environment.NewLine + 
+                                        "Time: " + mazeManager.GetElapsedTime() + "s" + Environment.NewLine + 
+                                        "Mistakes: " + mazeManager.GetWrongCount();
                 }
+                Debug.Log("You escaped!");
             }
             else
             {
