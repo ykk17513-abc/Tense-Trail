@@ -5,11 +5,9 @@ public class Exit : MonoBehaviour
 {
     // Take → Took → Taken 완료 여부를 확인
     [SerializeField] private MazeManager mazeManager;
-
     // GameView 문구 표시용
     [SerializeField] private TMP_Text feedbackText;
     [SerializeField] private GameObject feedbackPanel;
-
     private void OnTriggerEnter(Collider other)
     {
         // Exit 영역에 들어온 물체가 Player인지 확인
@@ -24,7 +22,7 @@ public class Exit : MonoBehaviour
                 if (feedbackText != null)
                 {
                     feedbackPanel.SetActive(true);
-                    feedbackText.text = "You escaped!" + Environment.NewLine + 
+                    feedbackText.text = "YOU ESCAPED!" + Environment.NewLine + Environment.NewLine +
                                         "Time: " + mazeManager.GetElapsedTime() + "s" + Environment.NewLine + 
                                         "Mistakes: " + mazeManager.GetWrongCount();
                 }
