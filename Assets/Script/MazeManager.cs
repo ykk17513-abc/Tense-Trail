@@ -14,6 +14,7 @@ public class MazeManager : MonoBehaviour
     private void Start()
     {
         startTime = Time.time; // 게임 시작 시간 기록
+        UpdateProgressUI(); // 진행도 UI
     }
 
     public bool CheckAnswer(string selectedWord) // 다른스크립트에서 호출 가능, true/false 반환, CheckAnswer 클래스, selectedWord 매개변수
@@ -32,6 +33,7 @@ public class MazeManager : MonoBehaviour
                 feedbackText.text = "Correct!";
             }
             currentIndex++; // 다음 정답 순서로 이동 
+            UpdateProgressUI(); // 진행도 UI 표시
             return true;
         }
 
@@ -45,6 +47,14 @@ public class MazeManager : MonoBehaviour
         }
         return false;
     }
+    // 진행도 텍스트 갱신 함수
+    private void UpdateProgressUI()
+    {
+        if (progressText != null)
+        {
+            progressText.text = "Progress: " + currentIndex + "/" + correctOrder.Length;
+        }
+    }
     // Take, Took, Taken 순서대로 맞췄는지 확인
     public bool IsCompleted()
     {
@@ -55,7 +65,6 @@ public class MazeManager : MonoBehaviour
     {
         return wrongCount;
     }
-
     public float GetElapsedTime() // 경과 시간 반환
     {
         return Time.time - startTime;
