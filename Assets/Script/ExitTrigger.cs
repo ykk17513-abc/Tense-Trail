@@ -26,10 +26,8 @@ public class Exit : MonoBehaviour
                                         "Time: " + mazeManager.GetElapsedTime() + "s" + Environment.NewLine +
                                         "Mistakes: " + mazeManager.GetWrongCount() + Environment.NewLine +
                                         feedbackMessage;
-                   
                 }
                 Debug.Log("You escaped!");
-
             }
             else
             {
@@ -41,7 +39,6 @@ public class Exit : MonoBehaviour
             }
         }
     }
-
     private string GetFeedbackMessage (int wrongCount)
     {
         if (wrongCount == 0)
@@ -55,9 +52,6 @@ public class Exit : MonoBehaviour
         else
         {
             return "Review the tense order: Take -> Took -> Taken.";
-        }
-        {
-
         }
     }
 }
